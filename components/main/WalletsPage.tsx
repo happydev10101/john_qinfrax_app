@@ -167,10 +167,10 @@ export default function WalletTodo() {
                   placeholder="Enter Stellar wallet address"
                   value={newWallet}
                   onChange={(e) => setNewWallet(e.target.value)}
-                  className="ku-input ku-input-bordered w-full"
+                  className="neon-input neon-input-info"
                 />
                 <p className="text-xs text-gray-300 mt-2">
-                  <span className="font-medium">Format:</span> Starts with <b>G</b> and followed by 55 characters
+                  <span className="font-medium">Format:</span> Starts with <b className='text-info'>G</b> and followed by <b className='text-info'>55</b> characters
                 </p>
               </div>
 

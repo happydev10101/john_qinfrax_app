@@ -71,7 +71,7 @@ export default function Navigation({ currentView, setCurrentView }: NavigationPr
               if (item.subMenu) return;
               handleViewChange(item.view);
             }}
-            className={`w-full py-3 px-2 ${isActive ? 'glow-button' : ''}`}
+            className={`w-full py-3 px-2 ${isActive ? 'glow-button glow-button-info' : ''}`}
           >
             <div
               className={`flex flex-col items-center justify-center space-y-1 ${
