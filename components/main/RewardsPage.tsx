@@ -6,7 +6,7 @@ import { triggerHapticFeedback } from '@/utils/ui';
 import MainLayout from '../layout/MainLayout';
 import { useUser } from '@/contexts/UserContext';
 import MyCard from '../custom/MyCard';
-import { getTierLevel } from '@/utils/consts';
+import { getTierLevel, quantumBenefitItems } from '@/utils/consts';
 
 interface RewardsPageProps {
   currentView: string;
@@ -66,12 +66,28 @@ export default function RewardsPage({ currentView, setCurrentView }: RewardsPage
                 )}
               </div>
             </MyCard>
-
             {/* Tier Benefits Section */}
-            {tierLevel && tierLevel.level > 0 && tierLevel.additionalBenifits && tierLevel.additionalBenifits.length > 0 && (
+            {tierLevel && tierLevel.level > 0 && (
               <MyCard p={0} className="overflow-hidden">
                 <div className="px-4 py-3 border-b border-info">
                   <h3 className="text-sm font-semibold text-gray-200">Tier Benefits</h3>
+                </div>
+                <div className="divide-y divide-info">
+                  {quantumBenefitItems.map((item) => (
+                    <div key={item.code} className="flex items-center gap-3 p-4">
+                      <div className="text-sm font-semibold text-success w-16 shrink-0">{item.code}</div>
+                      <div className="text-sm text-gray-300 flex-1">{item.label}</div>
+                      <div className="text-sm font-bold text-info">{ownershipPercent.toFixed(2)}%</div>
+                    </div>
+                  ))}
+                </div>
+              </MyCard>
+            )}
+            {/* Additional Benefits Section */}
+            {tierLevel && tierLevel.level > 0 && tierLevel.additionalBenifits && tierLevel.additionalBenifits.length > 0 && (
+              <MyCard p={0} className="overflow-hidden">
+                <div className="px-4 py-3 border-b border-info">
+                  <h3 className="text-sm font-semibold text-gray-200">Additional Benefits</h3>
                 </div>
                 <div className="divide-y divide-info">
                   {tierLevel.additionalBenifits.map((benefit, index) => (

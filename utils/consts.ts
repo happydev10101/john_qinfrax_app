@@ -197,6 +197,30 @@ export interface TierLevel {
   additionalBenifits?: Array<{emoticon: string, text: string}>;
 }
 
+export interface QuantumBenefitItem {
+  code: string;
+  label: string;
+}
+
+export const quantumBenefitItems: QuantumBenefitItem[] = [
+  { code: 'QPUX', label: 'Quantum Processing Power' },
+  { code: 'QCLX', label: 'Qubit Control Systems' },
+  { code: 'QMNX', label: 'Quantum Memory Nodes' },
+  { code: 'QESX', label: 'Entanglement Streams Access' },
+  { code: 'QRLX', label: 'Repeater Link Priority' },
+  { code: 'QCHX', label: 'Comm Bandwidth Share' },
+  { code: 'QSDX', label: 'State Detection Rights' },
+  { code: 'QKDX', label: 'Quantum Key Auth' },
+  { code: 'QCMP', label: 'Compiler Access Points' },
+  { code: 'QJSX', label: 'Job Scheduling Power' },
+  { code: 'QECX', label: 'Error Correction Units' },
+  { code: 'QLMX', label: 'Link Middleware Layer' },
+  { code: 'PQCS', label: 'Post-Quantum Security' },
+  { code: 'CQNI', label: 'Classical–Quantum Bridge' },
+  { code: 'QSATX', label: 'Satellite Network Access' },
+  { code: 'QOLX', label: 'Overledger Orchestration' },
+];
+
 export const TierLevels: TierLevel[] = [
   {
     level: 0,
