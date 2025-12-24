@@ -569,7 +569,7 @@ export const TierLevels: TierLevel[] = [
   {
     level: 10,
     start: 500000,
-    end: 749999,
+    end: Infinity, //749999,
     discountPercent: 0,
     ownershipPercent: 50,
     additionalBenifits: [
